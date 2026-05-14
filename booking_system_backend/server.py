@@ -387,9 +387,6 @@ async def release_hold(hold_id: str):
         except httpx.HTTPError as e:
             return {"error": f"Failed to release hold: {str(e)}"}
 
-    """Retrieve a user's information by providing both name and email."""
-    return user.get_user(db, name, email)
-
 
 # ==================== MOUNT MCP INTO FASTAPI ====================
 
